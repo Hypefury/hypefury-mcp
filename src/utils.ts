@@ -1,8 +1,8 @@
 import fetch from 'node-fetch';
 
-// Endpoints and API keys
-export const HF_AUTH_ENDPOINT = "https://hypefury-dev.firebaseapp.com/api/externalApps/auth";
-export const HF_SCHEDULE_ENDPOINT = "https://hypefury-dev.firebaseapp.com/api/externalApps/posts/save";
+export const HF_BASE_URL = "https://app.hypefury.com";
+export const HF_AUTH_ENDPOINT = `${HF_BASE_URL}/api/externalApps/auth`;
+export const HF_SCHEDULE_ENDPOINT = `${HF_BASE_URL}/api/externalApps/posts/save`;
 export const HF_PARTNER_KEY = "NjhiNGQ1NWItOWFjNi00MDlkLWI2MjktNjhkNTk5OTNkZWQz";
 export const HF_API_KEY = process.env.HF_API_KEY;
 
@@ -13,6 +13,7 @@ export const HF_API_KEY = process.env.HF_API_KEY;
  * @returns API response data
  */
 export async function makeHfRequest(url: string, body?: string) {
+    console.log(`Making request to ${HF_AUTH_ENDPOINT}`);
     if (!HF_API_KEY) {
         console.error('HF_API_KEY is not defined');
         return {
