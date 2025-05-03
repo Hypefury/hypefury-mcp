@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/hypefury-hypefury-mcp-badge.png)](https://mseep.ai/app/hypefury-hypefury-mcp)
+
 # Hypefury MCP Server
 
 This project is a Model Context Protocol (MCP) server for integrating with Hypefury, a social media scheduling and growth platform. The server provides tools for authenticating with Hypefury and scheduling posts.
